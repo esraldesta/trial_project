@@ -20,3 +20,18 @@ class Post(models.Model):
         verbose_name = 'post'
         verbose_name_plural = 'posts'
         # get_latest_by = 'id'
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post,related_name="comments",on_delete=models.CASCADE)
+    user = models.ForeignKey(User,related_name="commenters",on_delete=models.CASCADE)
+    comment = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.comment[:10]
+    
+    class Meta:
+        ordering = ['-created_at',]
+        verbose_name = 'comment'
+        verbose_name_plural = 'comments'

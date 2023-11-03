@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.generics import CreateAPIView,DestroyAPIView,ListAPIView
-from .models import Post
-from .serializers import PostCreateSerializer,PostSerializer
+from .models import Post,Comment
+from .serializers import PostCreateSerializer,PostSerializer,CommentSerializer
 
 # Create your views here.
 class CreatePostView(CreateAPIView):
@@ -31,3 +31,7 @@ def LikePostView(request,pk):
         post.likes.add(request.user)
     
     return Response(PostSerializer(post).data)
+
+class CreateCommentView(CreateAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer

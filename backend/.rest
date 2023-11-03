@@ -9,11 +9,11 @@ content-type: application/json
 
 ###
 POST http://localhost:8000/api/post/create/ HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5MDE0MzI2LCJpYXQiOjE2OTkwMTQwMjYsImp0aSI6ImYxMzUzMjQwYWFkMzRiMmJiZGRiYjQwZTVmZmQ0MDQ5IiwidXNlcl9pZCI6MywibmFtZSI6Im5ld3VzZXIifQ.aB3SP6ORIlt4ceL_NIw2NdTIS6-rN9lBXIJznJiTNN8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5MDQxMjcyLCJpYXQiOjE2OTkwNDA5NzIsImp0aSI6ImY2NTVkMzdhZGYwMzQ5MzM4ZjRlYThmOTRkNDg4YjkzIiwidXNlcl9pZCI6MTEsIm5hbWUiOiJuZXd1c2VyOSJ9.OSzIpBoVzxYQDs0TzB9lOVUSZCVk_NCMnQv6Ggabukw
 content-type: application/json
 
 {
-  "title":"title1",
+  "title":"title2",
   "body":"this is the body"
 }
 
@@ -28,3 +28,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 ###
 GET http://localhost:8000/api/profile/followship/4 HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5MDE2NTYyLCJpYXQiOjE2OTkwMTYyNjIsImp0aSI6Ijc4MzcxMjk4Y2RlMjRiMjhhMTMwNWI2MjAzZTUwYzA0IiwidXNlcl9pZCI6MTEsIm5hbWUiOiJuZXd1c2VyOSJ9.UQT6qa0UIJ7avKii0civTLMJvXnLRyO6SfTSKyGSbV4
+
+###
+POST http://localhost:8000/api/post/comment/4/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5MDQ0NTA2LCJpYXQiOjE2OTkwNDQyMDYsImp0aSI6ImU3ZjNjZTY3MGE2NTQ1N2FhNDc0ZDFlY2RkYWJiOWY4IiwidXNlcl9pZCI6MTEsIm5hbWUiOiJuZXd1c2VyOSJ9.8vePFR8RN-HBpvwm1m5hiHbOX35OLhHPsYGg4CFjL1g
+content-type: application/json
+
+{
+  "comment":"title1"
+}
