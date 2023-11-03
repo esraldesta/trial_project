@@ -1,0 +1,30 @@
+### login
+POST http://localhost:8000/api/token/ HTTP/1.1
+content-type: application/json
+
+{
+  "username":"newuser9",
+  "password":""
+}
+
+###
+POST http://localhost:8000/api/post/create/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5MDE0MzI2LCJpYXQiOjE2OTkwMTQwMjYsImp0aSI6ImYxMzUzMjQwYWFkMzRiMmJiZGRiYjQwZTVmZmQ0MDQ5IiwidXNlcl9pZCI6MywibmFtZSI6Im5ld3VzZXIifQ.aB3SP6ORIlt4ceL_NIw2NdTIS6-rN9lBXIJznJiTNN8
+content-type: application/json
+
+{
+  "title":"title1",
+  "body":"this is the body"
+}
+
+###
+DELETE  http://localhost:8000/api/post/delete/3/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5MDExNjYxLCJpYXQiOjE2OTkwMTEzNjEsImp0aSI6ImE2YzAyYWQxNjhiZTRhYzJhYmJjMTk0MTE2OGM5ZWY1IiwidXNlcl9pZCI6MywibmFtZSI6Im5ld3VzZXIifQ.I_Uye-rLgkmEMPTLrAko-eqS5MFWGcDAAAD_KeFK3yI
+
+###
+GET http://localhost:8000/api/post/like/4 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5MDE0ODg5LCJpYXQiOjE2OTkwMTQ1ODksImp0aSI6IjljZTFiMzI2ZmFjNjQ4YzFhYjFhZWIyNmUzOGRiM2I1IiwidXNlcl9pZCI6NCwibmFtZSI6Im5ld3VzZXIyIn0.9RzFuFFRJKfTRp9U9wckOMKbJNTl4hKeAktJniDn6bs
+
+###
+GET http://localhost:8000/api/profile/followship/4 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk5MDE2NTYyLCJpYXQiOjE2OTkwMTYyNjIsImp0aSI6Ijc4MzcxMjk4Y2RlMjRiMjhhMTMwNWI2MjAzZTUwYzA0IiwidXNlcl9pZCI6MTEsIm5hbWUiOiJuZXd1c2VyOSJ9.UQT6qa0UIJ7avKii0civTLMJvXnLRyO6SfTSKyGSbV4
