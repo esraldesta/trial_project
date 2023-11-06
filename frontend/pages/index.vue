@@ -1,5 +1,5 @@
 <template>
     <div>
-        logout
+        <h1>index</h1>
     </div>
 </template>
